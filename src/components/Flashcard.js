@@ -7,7 +7,8 @@ const Flashcard = props => {
    * INITIALIZATION
    *******************************************************************/
 
-  const wordId = props.wordId;
+  // const wordId = props.match;
+  const wordId = props.match.params.wordId;
   const [hebrew, setHebrew] = useState(null);
   const [english, setEnglish] = useState(null);
   const [flipped, setFlipped] = useState(false);
