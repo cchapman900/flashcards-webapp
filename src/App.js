@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Flashcard from './components/Flashcard';
 import Navbar from "react-bootstrap/Navbar";
+import Quiz from "./components/Quiz";
 
 function App() {
   return (
@@ -15,9 +16,15 @@ function App() {
       <div className="App">
         <Switch>
           <Route exact path={'/'}>
-            <Link to={'/words/5a9439a24e443d2b5c9d81b8'}>Go to a word</Link>
+            <p>
+              <Link to={'/words/5a9439a24e443d2b5c9d81b8'}>Go to a word</Link>
+            </p>
+            <p>
+              <Link to={'/quiz'}>Start a quiz</Link>
+            </p>
           </Route>
           <Route path={'/words/:wordId'} component={Flashcard} />
+          <Route path={'/quiz'} component={Quiz} />
         </Switch>
       </div>
     </Router>
