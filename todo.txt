@@ -1,3 +1,4 @@
 - Add home page
-- Add filter
 - Add pagination
+- Add confidence filter
+- Add session and overall reset
